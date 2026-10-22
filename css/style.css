@@ -1,4 +1,10 @@
-/* Design tokens from the Day 5 visual guide */
+/* ==========================================================
+   Tolera Girma – Portfolio
+   Day 9: desktop layout, typography, colors, spacing, cards
+   All values come from the Day 5 visual guide.
+   ========================================================== */
+
+/* 1. Design tokens (named values used everywhere below) */
 :root {
   --paper: #F7F4EE;   /* page background */
   --sand: #EAE4D8;    /* cards, bands */
@@ -6,18 +12,23 @@
   --stone: #5A645E;   /* secondary text */
   --forest: #3F5F4B;  /* buttons, links */
   --clay: #A04B30;    /* one small highlight per screen */
+  --line: #CFC8B8;    /* thin dividers */
 
   --font-heading: 'Newsreader', Georgia, serif;
   --font-body: 'Public Sans', system-ui, sans-serif;
 
   --space-1: 8px;
+  --space-2: 16px;
   --space-3: 24px;
   --space-6: 48px;
   --space-12: 96px;
   --max-width: 1040px;
 }
 
+/* 2. Base */
 * { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -27,3 +38,175 @@ body {
   font-size: 17px;
   line-height: 1.65;
 }
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+}
+
+h1 { font-size: 44px; }
+h2 { font-size: 28px; margin-bottom: var(--space-3); }
+h3 { font-size: 24px; font-weight: 500; }
+
+p { margin: 0 0 var(--space-2); }
+
+a { color: var(--forest); }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+/* Keyboard users can always see where they are */
+a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* 3. Header and navigation */
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-name {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+.site-header nav a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--forest);
+  text-decoration: underline;
+}
+
+/* 4. Main content width and section rhythm */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+main > section {
+  padding-top: var(--space-12);
+  scroll-margin-top: var(--space-3);
+}
+
+/* 5. Hero */
+.hero h1 {
+  max-width: 760px;
+  margin-bottom: var(--space-3);
+}
+
+/* The one small clay highlight */
+.hero::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--clay);
+  margin-bottom: var(--space-3);
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--stone);
+  margin-bottom: var(--space-3);
+}
+
+/* 6. Buttons (hero and contact) */
+.button {
+  display: inline-block;
+  background: var(--forest);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.button:hover { background: var(--ink); }
+
+/* 7. About */
+#about p { max-width: 680px; }
+
+/* 8. Projects: three cards side by side */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+/* The section heading spans all three columns */
+#projects h2 { grid-column: 1 / -1; margin-bottom: 0; }
+
+.project-card {
+  background: var(--sand);
+  border-radius: 12px;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.status {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--stone);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: auto;
+}
+
+.tags li {
+  border: 1px solid var(--stone);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 9. Contact */
+.contact-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* 10. Footer */
+.site-footer {
+  margin-top: var(--space-12);
+  padding: var(--space-6) var(--space-3);
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--stone);
+  font-size: 14px;
+}
+
+.site-footer p { margin: 0; }
