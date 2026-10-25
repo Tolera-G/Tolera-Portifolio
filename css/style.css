@@ -210,3 +210,63 @@ main > section {
 }
 
 .site-footer p { margin: 0; }
+
+/* ==========================================================
+   11. Responsive layout (Day 10)
+   Rules inside @media only apply when the screen is at most
+   that wide. They come last so they override the desktop rules.
+   ========================================================== */
+
+/* Tablet: up to 900 px wide */
+@media (max-width: 900px) {
+  h1 { font-size: 38px; }
+
+  main > section { padding-top: 72px; }
+
+  /* Two cards per row; the third card takes the full width */
+  #projects { grid-template-columns: repeat(2, 1fr); }
+  .project-card:nth-of-type(3) { grid-column: 1 / -1; }
+}
+
+/* Phone: up to 600 px wide */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+
+  /* Name on top, menu below it */
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: var(--space-2);
+  }
+
+  .site-header nav ul {
+    flex-wrap: wrap;
+    gap: 4px 20px;
+  }
+
+  /* Taller links are easier to tap with a thumb */
+  .site-header nav a {
+    display: inline-block;
+    padding: 8px 0;
+  }
+
+  main { padding: 0 var(--space-2); }
+  main > section { padding-top: 56px; }
+
+  .hero p { font-size: 18px; }
+
+  /* One card per row */
+  #projects { grid-template-columns: 1fr; }
+  .project-card:nth-of-type(3) { grid-column: auto; }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer { margin-top: 64px; }
+}
