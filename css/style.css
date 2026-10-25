@@ -107,13 +107,29 @@ main > section {
 }
 
 /* 5. Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+.hero-text { flex: 1; }
+.hero-photo {
+  flex: none;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0 0 0 8px var(--sand);
+  aspect-ratio: 1 / 1;
+}
 .hero h1 {
   max-width: 760px;
   margin-bottom: var(--space-3);
 }
 
 /* The one small clay highlight */
-.hero::before {
+.hero-text::before {
   content: "";
   display: block;
   width: 48px;
@@ -192,12 +208,56 @@ main > section {
   line-height: 1.5;
 }
 
-/* 9. Contact */
+/* 9. Contact: four icon cards in a responsive grid */
 .contact-links {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
 }
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  padding: var(--space-2) 18px;
+  background: var(--sand);
+  border-radius: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.contact-icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: fill 0.15s ease;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+
+.contact-card:hover { background: var(--forest); color: #fff; }
+.contact-card:hover .contact-icon { background: #fff; }
+.contact-card:hover .contact-icon svg { fill: var(--forest); }
 
 /* 10. Footer */
 .site-footer {
@@ -220,12 +280,26 @@ main > section {
 /* Tablet: up to 900 px wide */
 @media (max-width: 900px) {
   h1 { font-size: 38px; }
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-photo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 7 / 8  ;
+
+  }
 
   main > section { padding-top: 72px; }
 
   /* Two cards per row; the third card takes the full width */
   #projects { grid-template-columns: repeat(2, 1fr); }
   .project-card:nth-of-type(3) { grid-column: 1 / -1; }
+
+  /* Contact cards: two by two */
+  .contact-links { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Phone: up to 600 px wide */
@@ -263,10 +337,8 @@ main > section {
   #projects { grid-template-columns: 1fr; }
   .project-card:nth-of-type(3) { grid-column: auto; }
 
-  .contact-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  /* Contact cards: one per row, full width */
+  .contact-links { grid-template-columns: 1fr; }
 
   .site-footer { margin-top: 64px; }
 }
