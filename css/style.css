@@ -195,6 +195,16 @@ main > section {
   color: var(--stone);
 }
 
+.project-shot {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
