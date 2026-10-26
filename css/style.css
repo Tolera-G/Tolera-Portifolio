@@ -117,11 +117,11 @@ main > section {
 .hero-photo {
   flex: none;
   width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50px;
-  box-shadow: 0 0 0 8px var(--sand);
   aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px var(--sand);
 }
 .hero h1 {
   max-width: 760px;
@@ -284,12 +284,8 @@ main > section {
     flex-direction: column;
     align-items: flex-start;
   }
-  .hero-photo {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 7 / 8  ;
-
+    .hero-photo {
+    width: min(100%, 280px);
   }
 
   main > section { padding-top: 72px; }
