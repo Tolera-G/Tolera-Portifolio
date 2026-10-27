@@ -165,7 +165,7 @@ main > section {
   max-width: 680px;
   font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 2;
   font-weight: 600;
   color: var(--ink);
 }

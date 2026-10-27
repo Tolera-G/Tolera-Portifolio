@@ -1,9 +1,29 @@
 # Tolera Girma – Portfolio
 
-A personal portfolio website, built to learn the full web development process.
+My personal portfolio website, built from scratch to learn the full web development process.
 
-- Audience: recruiters (primary), people who want to know me and see my work (secondary)
-- Sections: About, My Journey, Projects, Contact
-- Look: calm, natural, human (see css/style.css for colors, fonts and spacing)
+**Live site:** (add the link after Day 18)
 
-Status: setup (Day 6).
+## Goal
+Show recruiters who I am and what I can build, in a calm, human and honest way.
+
+## Sections
+About · My Journey · Projects · Contact
+
+## Built with
+HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can explain.
+
+## Features
+- Responsive layout for phone, tablet and desktop
+- Mobile menu button (JavaScript)
+- Project cards with skills and links
+
+## Design decisions
+- Colors, fonts and spacing are in `css/style.css` as named values at the top.
+- The design is calm and simple on purpose: lots of space and one accent color.
+
+## Run it locally
+Open `index.html` in a browser. No installation is needed.
+
+## What I learned
+(Add after Day 20.)
