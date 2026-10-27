@@ -214,7 +214,46 @@ main > section {
 #journey .tags { margin-bottom: var(--space-2); }
 
 /* Vision */
-.vision-list li { max-width: 680px; margin-bottom: var(--space-2); }
+.vision-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.vision-card {
+  background: var(--sand);
+  border-radius: 12px;
+  padding: var(--space-3);
+}
+
+/* Green numbered circle, like the contact icons */
+.vision-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: var(--space-2);
+  border-radius: 50%;
+  background: var(--forest);
+  color: #fff;
+  font-weight: 600;
+}
+
+.vision-card h4 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 var(--space-1);
+}
+
+.vision-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--stone);
+}
 
 /* 8. Projects: three cards side by side */
 #projects {
@@ -412,6 +451,7 @@ main > section {
     stroke-width: 2;
     stroke-linecap: round;
   }
+    .vision-list { grid-template-columns: 1fr; }
 
   /* Show the X instead of the three lines while the menu is open */
   .menu-toggle .icon-close { display: none; }
