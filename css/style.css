@@ -161,7 +161,14 @@ main > section {
 .button:hover { background: var(--ink); }
 
 /* 7. About */
-#about p { max-width: 680px; }
+#about p {
+  max-width: 680px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 600;
+  color: var(--ink);
+}
 /* 7b. My Journey: timeline, skills and vision */
 .timeline {
   list-style: none;
