@@ -162,6 +162,59 @@ main > section {
 
 /* 7. About */
 #about p { max-width: 680px; }
+/* 7b. My Journey: timeline, skills and vision */
+.timeline {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  border-left: 2px solid var(--line);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 var(--space-3) var(--space-3);
+}
+
+/* The small green dot on the line */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--forest);
+}
+
+.timeline h3 { font-size: 20px; margin-bottom: 4px; }
+.timeline p { margin: 0; max-width: 640px; }
+
+/* Small headings: "What I know today", "My vision" */
+.subhead { font-size: 20px; margin: var(--space-3) 0 var(--space-1); }
+
+/* Skill cards */
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.skill-list li {
+  background: var(--sand);
+  border-radius: 12px;
+  padding: var(--space-2) 20px;
+}
+
+.skill-list strong { display: block; }
+.skill-list span { font-size: 15px; color: var(--stone); }
+
+/* "What I'm learning next" pills sit a little apart from the vision */
+#journey .tags { margin-bottom: var(--space-2); }
+
+/* Vision */
+.vision-list li { max-width: 680px; margin-bottom: var(--space-2); }
 
 /* 8. Projects: three cards side by side */
 #projects {
@@ -329,6 +382,7 @@ main > section {
         flex-direction: column;
     gap: 0;
   }
+    .skill-list { grid-template-columns: 1fr; }
 
   /* Taller links are easier to tap with a thumb */
   .site-header nav a {
