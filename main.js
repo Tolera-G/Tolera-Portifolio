@@ -14,3 +14,18 @@ nav.addEventListener('click', (event) => {
     toggle.setAttribute('aria-expanded', 'false');
   }
 });
+
+// Close the menu when tapping outside it, or pressing Escape
+document.addEventListener('click', (event) => {
+  if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+});

@@ -422,6 +422,7 @@ main > section {
     justify-content: space-between;
     gap: 12px;
     padding: var(--space-2);
+    position: relative;
   }
 
   .site-header nav ul {
@@ -431,9 +432,15 @@ main > section {
     .skill-list { grid-template-columns: 1fr; }
 
   /* Taller links are easier to tap with a thumb */
-  .site-header nav a {
-    display: inline-block;
-    padding: 8px 0;
+    .site-header nav a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+  }
+
+  .site-header nav a:hover {
+    background: var(--sand);
+    text-decoration: none;
   }
 
     .menu-toggle {
@@ -465,7 +472,20 @@ main > section {
   .menu-toggle[aria-expanded="true"] .icon-open { display: none; }
   .menu-toggle[aria-expanded="true"] .icon-close { display: inline; }
 
-  .site-header nav { display: none; width: 100%; }
+    /* The menu becomes a dropdown box under the button */
+  .site-header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: var(--space-2);
+    z-index: 10;
+    width: min(240px, calc(100vw - 32px));
+    padding: var(--space-1);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(31, 42, 36, 0.12);
+  }
   .site-header nav.open { display: block; }
   main { padding: 0 var(--space-2); }
   main > section { padding-top: 56px; }
