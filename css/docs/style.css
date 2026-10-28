@@ -1,0 +1,110 @@
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background and layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #263238;
+}
+
+/* Main quote card */
+.quote-card {
+    width: 100%;
+    max-width: 550px;
+    padding: 45px 35px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Small label */
+.label {
+    color: #6478d3;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* Main heading */
+h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Decorative quotation mark */
+.quote-mark {
+    font-family: Georgia, serif;
+    font-size: 75px;
+    line-height: 1;
+    color: #6478d3;
+}
+
+/* Quote text */
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 10px 0 20px;
+}
+
+/* Author name */
+.author {
+    color: #6478d3;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+.quote-button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #6478d3;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button hover effect */
+.quote-button:hover {
+    background-color: #4b5db5;
+    transform: translateY(-2px);
+}
+
+/* Footer text */
+.footer-text {
+    margin-top: 25px;
+    color: #888888;
+    font-size: 13px;
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+    .quote-card {
+        padding: 35px 22px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    blockquote {
+        font-size: 21px;
+    }
+}
