@@ -467,11 +467,6 @@ main > section {
   }
     .vision-list { grid-template-columns: 1fr; }
 
-  /* Show the X instead of the three lines while the menu is open */
-  .menu-toggle .icon-close { display: none; }
-  .menu-toggle[aria-expanded="true"] .icon-open { display: none; }
-  .menu-toggle[aria-expanded="true"] .icon-close { display: inline; }
-
     /* The menu becomes a dropdown box under the button */
   .site-header nav {
     display: none;
@@ -501,3 +496,4 @@ main > section {
 
   .site-footer { margin-top: 64px; }
 }
+  .menu-toggle[aria-expanded="true"] { background: var(--sand); }
