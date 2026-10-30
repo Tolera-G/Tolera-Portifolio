@@ -18,6 +18,7 @@ Show recruiters who I am and what I can build, in a calm, human and honest way.
 
 ## Built with
 HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can explain.
+- **No backend for the portfolio.** Everything on the site is fixed content or links, so a backend would add cost and risk with no benefit. I will learn backend development through a project that really needs it, like ClearCampus.
 
 ## Features
 - Responsive layout for desktop, tablet (up to 900 px) and phone (up to 600 px)
