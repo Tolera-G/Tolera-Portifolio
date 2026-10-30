@@ -2,7 +2,7 @@
 
 My personal portfolio website, built from scratch to learn the full web development process: planning, design, code, testing and publishing.
 
-**Live site:** not published yet. The link will be added here.
+**Live site:** https://tolera-g.github.io/tolera-portfolio/
 
 ## Goal
 Show recruiters who I am and what I can build, in a calm, human and honest way.
@@ -50,7 +50,7 @@ In progress, following a 20-day learning plan (15 October to 11 November 2026).
 - [x] My Journey content
 - [ ] Project screenshots and links
 - [ ] Testing and code cleanup
-- [ ] Publishing the site
+- [x] Publishing the site
 
 ## What I have learned so far
 - Planning a site before coding: audience, content, wireframe and visual guide
