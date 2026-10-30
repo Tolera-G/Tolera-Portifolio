@@ -2,7 +2,7 @@
 
 My personal portfolio website, built from scratch to learn the full web development process: planning, design, code, testing and publishing.
 
-**Live site:** https://tolera-g.github.io/tolera-portfolio/
+**Live site:** https://tolera-g.github.io/tolera-portifolio/
 
 ## Goal
 Show recruiters who I am and what I can build, in a calm, human and honest way.
