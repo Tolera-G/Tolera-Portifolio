@@ -451,9 +451,9 @@ main > section {
   }
 
   /* Taller links are easier to tap with a thumb */
-    .site-header nav a {
+      .site-header nav a {
     display: block;
-    padding: 12px 16px;
+    padding: 10px 14px;
     border-radius: 8px;
   }
 
@@ -486,16 +486,18 @@ main > section {
   }
     .vision-list { grid-template-columns: 1fr; }
 
-    /* The menu becomes a dropdown box under the button */
+      /* The menu becomes a small, see-through dropdown box under the button */
   .site-header nav {
     display: none;
     position: absolute;
     top: 100%;
     right: var(--space-2);
     z-index: 10;
-    width: min(240px, calc(100vw - 32px));
-    padding: var(--space-1);
-    background: var(--paper);
+    width: min(200px, calc(100vw - 32px));
+    padding: 6px;
+    background: rgba(247, 244, 238, 0.82);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
     border: 1px solid var(--line);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(31, 42, 36, 0.12);

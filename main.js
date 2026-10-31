@@ -29,3 +29,11 @@ document.addEventListener('keydown', (event) => {
     toggle.setAttribute('aria-expanded', 'false');
   }
 });
+
+// Close the menu when the page is scrolled
+window.addEventListener('scroll', () => {
+  if (nav.classList.contains('open')) {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+}, { passive: true });
