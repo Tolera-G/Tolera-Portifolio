@@ -107,7 +107,15 @@ main > section {
   padding-top: var(--space-12);
   scroll-margin-top: var(--space-3);
 }
-
+/* Section spacing: a clear gap and a thin line before each section */
+#about,
+#journey,
+#projects,
+#contact {
+  margin-top: var(--space-12);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
 /* 5. Hero */
 .hero {
   display: flex;
@@ -299,7 +307,7 @@ main > section {
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: top;
+  object-position: left top;
   border-radius: 8px;
   border: 1px solid var(--line);
 }
@@ -400,6 +408,10 @@ main > section {
   }
 
   main > section { padding-top: 72px; }
+    #about,
+  #journey,
+  #projects,
+  #contact { margin-top: 72px; }
 
   /* Two cards per row; the third card takes the full width */
   #projects { grid-template-columns: repeat(2, 1fr); }
@@ -430,6 +442,13 @@ main > section {
     gap: 0;
   }
     .skill-list { grid-template-columns: 1fr; }
+      #about,
+  #journey,
+  #projects,
+  #contact {
+    margin-top: 64px;
+    padding-top: 32px;
+  }
 
   /* Taller links are easier to tap with a thumb */
     .site-header nav a {
