@@ -493,11 +493,12 @@ main > section {
     top: 100%;
     right: var(--space-2);
     z-index: 10;
-    width: min(200px, calc(100vw - 32px));
+    width: max-content;
+    max-width: calc(100vw - 32px);
     padding: 6px;
-    background: rgba(247, 244, 238, 0.82);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
+    background: rgba(247, 244, 238, 0.6);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     border: 1px solid var(--line);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(31, 42, 36, 0.12);
