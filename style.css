@@ -48,7 +48,7 @@ h1, h2, h3 {
 }
 
 h1 { font-size: 44px; }
-h2 { font-size: 28px; margin-bottom: var(--space-3); }
+h2 { font-size: 32px; margin-bottom: var(--space-3); }
 h3 { font-size: 24px; font-weight: 500; }
 
 p { margin: 0 0 var(--space-2); }
@@ -171,11 +171,10 @@ main > section {
 
 /* 7. About */
 #about p {
-  max-width: 680px;
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 2;
-  font-weight: 600;
+  max-width: 65ch;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
   color: var(--ink);
 }
 /* 7b. My Journey: timeline, skills and vision */
@@ -224,7 +223,7 @@ main > section {
 }
 
 .skill-list strong { display: block; }
-.skill-list span { font-size: 15px; color: var(--stone); }
+.skill-list span { font-size: 16px; color: var(--stone); }
 
 /* "What I'm learning next" pills sit a little apart from the vision */
 #journey .tags { margin-bottom: var(--space-2); }
@@ -266,7 +265,7 @@ main > section {
 
 .vision-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--stone);
 }
@@ -292,7 +291,7 @@ main > section {
 
 .project-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
@@ -324,7 +323,7 @@ main > section {
   border: 1px solid var(--stone);
   border-radius: 20px;
   padding: 3px 10px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -427,7 +426,7 @@ main > section {
   body { font-size: 16px; }
 
   h1 { font-size: 32px; }
-  h2 { font-size: 24px; }
+  h2 { font-size: 26px; }
 
   /* Name on top, menu below it */
   .site-header {
