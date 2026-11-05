@@ -27,6 +27,7 @@ HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can e
 - Clear section dividers: a gap and a thin line before each section, so a new section is easy to spot
 - Design values (colors, fonts, spacing) named once at the top of the stylesheet
 - Semantic HTML, image descriptions, keyboard focus styles and `aria-expanded` on the menu button
+- A small round profile photo beside my name in the header, which links back to the top of the page
 
 ## Design
 - Calm, natural and human: a paper-colored background, sand cards, dark ink text and forest green for buttons and links
@@ -66,7 +67,7 @@ In progress, following a 20-day learning plan (15 October to 11 November 2026).
 - JavaScript basics: finding elements, listening for clicks and changing classes
 - How the web works: requests, responses and status codes, and the difference between frontend and backend
 - Git and GitHub: small commits with clear messages, and publishing with GitHub Pages
-- Writing documentation, so my choices can be understood later
+- Cropping photos with `object-fit` and `object-position`, and marking decorative images with an empty `alt` so screen readers skip them
 
 ## Credits
 - Icons: [Font Awesome Free](https://fontawesome.com/license/free) (CC BY 4.0)
