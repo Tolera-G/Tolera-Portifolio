@@ -23,12 +23,15 @@ HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can e
 - Responsive layout for desktop, tablet (up to 900 px) and phone (up to 600 px)
 - Mobile menu: a button with an icon that opens a small, semi-transparent dropdown (JavaScript)
 - Project cards with screenshots and skill tags
+- Hover effects on cards: project cards lift gently and change color, and the skill and vision cards get a soft tint. They only apply on devices with a pointer, and are switched off for visitors who prefer reduced motion.
+- Clear section dividers: a gap and a thin line before each section, so a new section is easy to spot
 - Design values (colors, fonts, spacing) named once at the top of the stylesheet
 - Semantic HTML, image descriptions, keyboard focus styles and `aria-expanded` on the menu button
 
 ## Design
 - Calm, natural and human: a paper-colored background, sand cards, dark ink text and forest green for buttons and links
 - Headings in Newsreader, body text in Public Sans
+- A small type scale for consistency: 44 px page title, 32 px section titles, 20 px for introductory text (hero line and About), 16-17 px for body and card text, and 14 px for tags
 - Spacing based on a single 8 px unit
 
 ## Project structure
