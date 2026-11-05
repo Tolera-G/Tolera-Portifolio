@@ -78,8 +78,19 @@ a:focus-visible {
   font-size: 22px;
   color: var(--ink);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 }
 
+.site-photo {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+}
 .site-header nav ul {
   display: flex;
   gap: 28px;
