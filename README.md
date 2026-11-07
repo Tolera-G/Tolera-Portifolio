@@ -28,18 +28,21 @@ HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can e
 - Design values (colors, fonts, spacing) named once at the top of the stylesheet
 - Semantic HTML, image descriptions, keyboard focus styles and `aria-expanded` on the menu button
 - A small round profile photo beside my name in the header, which links back to the top of the page
+- Link preview: when the site's link is shared on apps like Telegram or LinkedIn, it shows a title, a description and an image (Open Graph tags)
+- Dark theme that follows the visitor's device setting, using the same color variables with new values
+- Light, square, face-centered photos (about 28 KB for the hero and 2 KB for the header) instead of one 920 KB original
 
 ## Design
 - Calm, natural and human: a paper-colored background, sand cards, dark ink text and forest green for buttons and links
 - Headings in Newsreader, body text in Public Sans
 - A small type scale for consistency: 44 px page title, 32 px section titles, 20 px for introductory text (hero line and About), 16-17 px for body and card text, and 14 px for tags
 - Spacing based on a single 8 px unit
-
+- Dark theme: a deep green-black page with sage green for links and buttons, switched automatically by the device setting (`prefers-color-scheme`)
 ## Project structure
 - index.html: the page
 - css/style.css: all styles
 - js/main.js: the mobile menu
-- images/: my photo and project screenshots
+- images/: optimized photos, project screenshots and the link preview image (share.png)
 - docs/decisions.md: the choices I made and why
 
 ## Run it locally
@@ -68,6 +71,9 @@ In progress, following a 20-day learning plan (15 October to 11 November 2026).
 - How the web works: requests, responses and status codes, and the difference between frontend and backend
 - Git and GitHub: small commits with clear messages, and publishing with GitHub Pages
 - Cropping photos with `object-fit` and `object-position`, and marking decorative images with an empty `alt` so screen readers skip them
+- Building a dark theme with CSS variables and `prefers-color-scheme`, and checking text contrast in both themes
+- Writing Open Graph tags for link previews, and why apps like Telegram remember old previews
+- Optimizing images: cropping, resizing and compressing them for faster loading
 
 ## Credits
 - Icons: [Font Awesome Free](https://fontawesome.com/license/free) (CC BY 4.0)
