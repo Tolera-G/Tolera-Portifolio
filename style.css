@@ -372,7 +372,7 @@ main > section {
 .contact-icon svg {
   width: 20px;
   height: 20px;
-  fill: #fff;
+  fill: var(--on-forest);
   transition: fill 0.15s ease;
 }
 
@@ -383,9 +383,8 @@ main > section {
   line-height: 1.35;
 }
 
-
-.contact-card:hover { background: var(--forest); color: #fff; }
-.contact-card:hover .contact-icon { background: #fff; }
+.contact-card:hover { background: var(--forest); color: var(--on-forest); }
+.contact-card:hover .contact-icon { background: var(--on-forest); }
 .contact-card:hover .contact-icon svg { fill: var(--forest); }
 
 /* 10. Footer */
