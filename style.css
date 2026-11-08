@@ -13,6 +13,7 @@
   --forest: #3F5F4B;  /* buttons, links */
   --clay: #A04B30;    /* one small highlight per screen */
   --line: #CFC8B8;    /* thin dividers */
+  --card-hover: #DFE7DA;   /* project card hover color */
 
   --font-heading: 'Newsreader', Georgia, serif;
   --font-body: 'Public Sans', system-ui, sans-serif;
@@ -544,7 +545,7 @@ main > section {
   .project-card:focus-within {
         transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(31, 42, 36, 0.12);
-        background: #DFE7DA;
+    background: var(--card-hover);
   }
 
   /* Skill and vision cards: a soft tint, no movement */
@@ -587,5 +588,6 @@ main > section {
     --on-forest: #12201A;
     --shadow: rgba(0, 0, 0, 0.4);
     --glass: rgba(23, 28, 25, 0.6);
+   --card-hover: #2C3A31;
   }
 }
