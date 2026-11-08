@@ -29,7 +29,7 @@ HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can e
 - Semantic HTML, image descriptions, keyboard focus styles and `aria-expanded` on the menu button
 - A small round profile photo beside my name in the header, which links back to the top of the page
 - Link preview: when the site's link is shared on apps like Telegram or LinkedIn, it shows a title, a description and an image (Open Graph tags)
-- Dark theme that follows the visitor's device setting, using the same color variables with new values
+- Dark theme that follows the visitor's device setting. Every color, including the text on buttons, the shadows, the see-through menu and the card hover colors, comes from a variable, so nothing stays light by mistake.
 - Light, square, face-centered photos (about 28 KB for the hero and 2 KB for the header) instead of one 920 KB original
 
 ## Design
@@ -37,7 +37,7 @@ HTML, CSS and JavaScript. No frameworks, so every part is code I wrote and can e
 - Headings in Newsreader, body text in Public Sans
 - A small type scale for consistency: 44 px page title, 32 px section titles, 20 px for introductory text (hero line and About), 16-17 px for body and card text, and 14 px for tags
 - Spacing based on a single 8 px unit
-- Dark theme: a deep green-black page with sage green for links and buttons, switched automatically by the device setting (`prefers-color-scheme`)
+- Dark theme: a deep green-black page with sage green for links and buttons and dark text on the buttons, switched automatically by the device setting (`prefers-color-scheme`). I checked the contrast of the main text pairs in both themes. (`prefers-color-scheme`)
 ## Project structure
 - index.html: the page
 - css/style.css: all styles
@@ -74,6 +74,8 @@ In progress, following a 20-day learning plan (15 October to 11 November 2026).
 - Building a dark theme with CSS variables and `prefers-color-scheme`, and checking text contrast in both themes
 - Writing Open Graph tags for link previews, and why apps like Telegram remember old previews
 - Optimizing images: cropping, resizing and compressing them for faster loading
+- Why a dark theme can break: a color typed directly into a rule (like white text on a button) doesn't change with the theme, so colors belong in variables
+- Testing both themes in DevTools by emulating `prefers-color-scheme`, and finding leftover hard-coded colors with a regex search
 
 ## Credits
 - Icons: [Font Awesome Free](https://fontawesome.com/license/free) (CC BY 4.0)
