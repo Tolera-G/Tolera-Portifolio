@@ -505,7 +505,7 @@ main > section {
     width: max-content;
     max-width: calc(100vw - 32px);
     padding: 6px;
-    background: rgba(247, 244, 238, 0.6);
+    background: var(--glass);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border: 1px solid var(--line);
