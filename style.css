@@ -313,11 +313,12 @@ main > section {
 }
 
 .project-shot {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: left top;
+  object-position: top;
   border-radius: 8px;
   border: 1px solid var(--line);
 }
